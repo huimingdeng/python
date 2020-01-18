@@ -5,11 +5,14 @@ A python study repository. Test multiple ssh key.
 
 ### Step One: Generate a new SSH key
 ```bash
-sshkey -t rsa -b 4096 -C "your_email@host.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/your_name  //eg. Tom-php
+$ ssh-keygen -t rsa -b 4096 -C "your_email@host.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Tom/.ssh/id_rsa): [eg. /c/Users/Tom/.ssh/Tom_rsa]
+... ...
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/your_name  //eg. Tom-php
 // Test
-ssh -T git@github.com
+$ ssh -T git@github.com
 ```
 
 Add your public Key to Github.
